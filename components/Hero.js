@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TestimonialsAvatars from "./TestimonialsAvatars";
 import config from "@/config";
+import Link from "next/link"; 
 
 const Hero = () => {
   return (
@@ -13,9 +14,11 @@ const Hero = () => {
           We find and fix email subscriber typos to find subscribers your
           missing
         </p>
-        <button className="btn btn-primary btn-wide">
-          Get {config.appName}
-        </button>
+        <Link href="/form" passHref>
+          <button className="btn btn-primary btn-wide">
+            Get {config.appName}
+          </button>
+        </Link>
 
         <TestimonialsAvatars priority={true} />
       </div>

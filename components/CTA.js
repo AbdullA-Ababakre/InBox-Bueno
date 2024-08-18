@@ -1,5 +1,6 @@
 import Image from "next/image";
 import config from "@/config";
+import Link from "next/link"; 
 
 const CTA = () => {
   return (
@@ -21,9 +22,11 @@ const CTA = () => {
             engagement
           </p>
 
-          <button className="btn btn-primary btn-wide">
-            Get {config.appName}
-          </button>
+          <Link href="/form" passHref>
+            <button className="btn btn-primary btn-wide">
+              Get {config.appName}
+            </button>
+          </Link>
         </div>
       </div>
     </section>
